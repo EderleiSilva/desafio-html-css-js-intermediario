@@ -1,0 +1,98 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-image: url(../images/bg-repeat.jpg);
+    background-size: contain;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.container .info{
+    width: 300px;
+    height: 111px;
+    color: #FFFFFF;
+}
+
+.container .info h1{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 10px 0;
+    text-transform: uppercase;
+}
+
+.container .info p{
+    font-size: 15px;
+}
+
+.container .formulario{
+    width: 340px;
+    height: 378px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+
+.formulario .campo{
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 20px 0;
+}
+
+.formulario .campo::placeholder,
+.formulario input{
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.formulario .campoMensangem{
+    height: 100px;
+}
+
+.formulario h2{
+    font-size: 15px;
+    font-weight: 400;
+    margin: 7px 0 9px 15px;
+}
+
+.formulario .botao{
+    cursor: pointer;
+    min-height: 40px;
+    border-radius: 5px;
+    background-color: #3CCC87;
+    color: #FFFFFF;
+    margin: 0 20px 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.formulario .aviso{
+    font-size: 8px;
+    padding-left: 22px;
+    color: #F52E2E;
+    display: none;
+    margin-bottom: -9px;
+}
+
+.formulario .aviso:last-of-type{
+    margin-bottom: 0;
+}
+
+.formulario .aviso.ativo{
+    display: block;
+}
+
+.formulario .campo.vermelho{
+    border: 1px solid #F52E2E;
+}
+
+.formulario .campo.verde{
+    border: 1px solid #00C22B;
+}
