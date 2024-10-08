@@ -1,100 +1,116 @@
-const nome = document.getElementById("nome");
-const avisoNome = document.querySelector(".avisoNome");
+const verificarCampo = document.querySelectorAll(".campo");
+const botaoConfirmar = document.querySelector(".botao");
 
-const email = document.getElementById("email");
-const avisoEmail = document.querySelector(".avisoEmail");
+botaoConfirmar.addEventListener('click', function() {
+    event.preventDefault();
 
-const telefone = document.getElementById("telefone");
-const avisoTelefone = document.querySelector(".avisoTelefone");
+    verificarCampo.forEach((campos) => {
+        if(campos.value){
+            campos.classList.add("verde");
+            campos.nextElementSibling.classList.remove("ativo");
+        } else {
+            campos.classList.remove("verde");
+            campos.classList.add("vermelho");
+            campos.nextElementSibling.classList.add("ativo");
+        }
+    })
+})
 
-const mensagem = document.getElementById("mensagem");
-const avisoMensagem = document.querySelector(".avisoMensagem");
+// const nome = document.getElementById("nome");
+// const avisoNome = document.querySelector(".avisoNome");
 
-const removerCampo = document.querySelector(".campo");
-const removerAviso = document.querySelector(".aviso");
+// const email = document.getElementById("email");
+// const avisoEmail = document.querySelector(".avisoEmail");
 
-const botaoConfirmar = document.getElementById("botao");
+// const telefone = document.getElementById("telefone");
+// const avisoTelefone = document.querySelector(".avisoTelefone");
 
+// const mensagem = document.getElementById("mensagem");
+// const avisoMensagem = document.querySelector(".avisoMensagem");
 
-function nomePreechido(){
-    if( nome.value.trim() === ""){
-        nome.classList.add("vermelho");
-        avisoNomeExibe();
-    }else{
-        nome.classList.add("verde");
-    }
-}
+// const removerCampo = document.querySelector(".campo");
+// const removerAviso = document.querySelector(".aviso");
 
-function avisoNomeExibe(){
-    avisoNome.classList.add("ativo");
-}
+// const botaoConfirmar = document.getElementById("botao");
 
-function emailPreechido(){
-    if( email.value.trim() === ""){
-        email.classList.add("vermelho");
-        avisoEmailExibe();
-    }else{
-        email.classList.add("verde");
-    }
-}
+// function nomePreechido(){
+//     if( nome.value.trim() === ""){
+//         nome.classList.add("vermelho");
+//         avisoNomeExibe();
+//     }else{
+//         nome.classList.add("verde");
+//     }
+// }
 
-function avisoEmailExibe(){
-    avisoEmail.classList.add("ativo");
-}
+// function avisoNomeExibe(){
+//     avisoNome.classList.add("ativo");
+// }
 
-function telefonePreechido(){
-    if( telefone.value.trim() === ""){
-        telefone.classList.add("vermelho");
-        avisoTelefoneExibe();
-    }else{
-        telefone.classList.add("verde");
-    }
-}
+// function emailPreechido(){
+//     if( email.value.trim() === ""){
+//         email.classList.add("vermelho");
+//         avisoEmailExibe();
+//     }else{
+//         email.classList.add("verde");
+//     }
+// }
 
-function avisoTelefoneExibe(){
-    avisoTelefone.classList.add("ativo");
-}
+// function avisoEmailExibe(){
+//     avisoEmail.classList.add("ativo");
+// }
 
-function mensagemPreechido(){
-    if( mensagem.value.trim() === ""){
-        mensagem.classList.add("vermelho");
-        avisoMensagemExibe();
-    }else{
-        mensagem.classList.add("verde");
-    }
-}
+// function telefonePreechido(){
+//     if( telefone.value.trim() === ""){
+//         telefone.classList.add("vermelho");
+//         avisoTelefoneExibe();
+//     }else{
+//         telefone.classList.add("verde");
+//     }
+// }
 
-function avisoMensagemExibe(){
-    avisoMensagem.classList.add("ativo");
-}
+// function avisoTelefoneExibe(){
+//     avisoTelefone.classList.add("ativo");
+// }
 
+// function mensagemPreechido(){
+//     if( mensagem.value.trim() === ""){
+//         mensagem.classList.add("vermelho");
+//         avisoMensagemExibe();
+//     }else{
+//         mensagem.classList.add("verde");
+//     }
+// }
 
-botaoConfirmar.addEventListener('click', function(){
+// function avisoMensagemExibe(){
+//     avisoMensagem.classList.add("ativo");
+// }
 
-    const classCampo = document.querySelectorAll(".campo")
-    const classAviso = document.querySelectorAll(".aviso");
+// botaoConfirmar.addEventListener('click', function(){
+
+//     const classCampo = document.querySelectorAll(".campo");
+//     const classAviso = document.querySelectorAll(".aviso");
 
     
-    for(let index = 0; index <= 3; index++){
+//     for(let index = 0; index <= 3; index++){
 
-        if(classCampo[index].classList.contains("vermelho")){
-            classCampo[index].classList.remove("vermelho");
-        }
+//         if(classCampo[index].classList.contains("vermelho")){
+//             classCampo[index].classList.remove("vermelho");
+//         }
 
-        if(classCampo[index].classList.contains("verde")){
-            classCampo[index].classList.remove("verde");
-        }
-    }
+//         if(classCampo[index].classList.contains("verde")){
+//             classCampo[index].classList.remove("verde");
+//         }
+//     }
 
-    for(let index = 0; index <= 3; index++){
-        if(classAviso[index]){
-            classAviso[index].classList.remove("ativo");
-        }
-    }
+//     for(let index = 0; index <= 3; index++){
+//         if(classAviso[index]){
+//             classAviso[index].classList.remove("ativo");
+//         }
+//     }
 
-    event.preventDefault();
-    nomePreechido();
-    emailPreechido();
-    telefonePreechido();
-    mensagemPreechido();
-})
+//     event.preventDefault();
+//     nomePreechido();
+//     emailPreechido();
+//     telefonePreechido();
+//     mensagemPreechido();
+// })

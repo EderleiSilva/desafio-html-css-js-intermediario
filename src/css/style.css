@@ -11,6 +11,7 @@ html{
     align-items: center;
     justify-content: center;
     gap: 60px;
+    padding: 20px;
 }
 
 .container .info{
@@ -54,6 +55,7 @@ html{
 
 .formulario .campoMensangem{
     height: 100px;
+    resize: none;
 }
 
 .formulario h2{
